@@ -41,658 +41,6 @@
         </members>
       </column>
     </datasource>
-    <datasource caption='Master' inline='true' name='federated.0vrr0v40wqln8e1dxvmqy1g8t9tw' version='10.4'>
-      <connection class='federated'>
-        <named-connections>
-          <named-connection caption='Published PIM - master' name='excel-direct.14n4igt0xpd7yg1fhtnht1qmmjfn'>
-            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='K:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_report/raw data/Published PIM - master.xlsx' interpretationMode='0' password='' server='' validate='no' />
-          </named-connection>
-        </named-connections>
-        <relation connection='excel-direct.14n4igt0xpd7yg1fhtnht1qmmjfn' name='Sheet1' table='[Sheet1$]' type='table'>
-          <columns gridOrigin='A1:AM10001:no:A1:AM10001:0' header='yes' outcome='6'>
-            <column datatype='string' name='Variant no.' ordinal='0' />
-            <column datatype='string' name='Brand' ordinal='1' />
-            <column datatype='string' name='Structure assignments (Prada Global (Merchandiser Structure))' ordinal='2' />
-            <column datatype='string' name='Quality status (W2 Image)' ordinal='3' />
-            <column datatype='string' name='Quality status (Angle 1 hi)' ordinal='4' />
-            <column datatype='integer' name='Delivery month' ordinal='5' />
-            <column datatype='real' name='Delivery year' ordinal='6' />
-            <column datatype='string' name='Published PIM (global)' ordinal='7' />
-            <column datatype='string' name='Published WCS (global)' ordinal='8' />
-            <column datatype='string' name='Published PIM (Canada)' ordinal='9' />
-            <column datatype='string' name='Published WCS (Canada)' ordinal='10' />
-            <column datatype='string' name='Published PIM (China)' ordinal='11' />
-            <column datatype='string' name='Published WCS (China)' ordinal='12' />
-            <column datatype='string' name='Published PIM (Europe)' ordinal='13' />
-            <column datatype='string' name='Published WCS (Europe)' ordinal='14' />
-            <column datatype='string' name='Published PIM (Japan)' ordinal='15' />
-            <column datatype='string' name='Published WCS (Japan)' ordinal='16' />
-            <column datatype='string' name='Published PIM (United States)' ordinal='17' />
-            <column datatype='string' name='Published WCS (United States)' ordinal='18' />
-            <column datatype='string' name='Sale (Europe)' ordinal='19' />
-            <column datatype='string' name='Sale (United States)' ordinal='20' />
-            <column datatype='string' name='Sale (Canada)' ordinal='21' />
-            <column datatype='string' name='Sale (Japan)' ordinal='22' />
-            <column datatype='string' name='Sale (China)' ordinal='23' />
-            <column datatype='integer' name='Stock Ecommerce (United States)' ordinal='24' />
-            <column datatype='integer' name='Stock Store (United States)' ordinal='25' />
-            <column datatype='integer' name='Stock Ecommerce (Europe)' ordinal='26' />
-            <column datatype='integer' name='Stock Store (Europe)' ordinal='27' />
-            <column datatype='integer' name='Stock Ecommerce (China)' ordinal='28' />
-            <column datatype='integer' name='Stock Store (China)' ordinal='29' />
-            <column datatype='integer' name='Stock Ecommerce (Japan)' ordinal='30' />
-            <column datatype='integer' name='Stock Store (Japan)' ordinal='31' />
-            <column datatype='integer' name='Stock Ecommerce (Canada)' ordinal='32' />
-            <column datatype='integer' name='Stock Store (Canada)' ordinal='33' />
-            <column datatype='string' name='Product Lifecycle (Canada)' ordinal='34' />
-            <column datatype='string' name='Product Lifecycle (China)' ordinal='35' />
-            <column datatype='string' name='Product Lifecycle (Europe)' ordinal='36' />
-            <column datatype='string' name='Product Lifecycle (Japan)' ordinal='37' />
-            <column datatype='string' name='Product Lifecycle (United States)' ordinal='38' />
-          </columns>
-        </relation>
-        <metadata-records>
-          <metadata-record class='column'>
-            <remote-name>Variant no.</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Variant no.]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Variant no.</remote-alias>
-            <ordinal>0</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Brand</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Brand]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Brand</remote-alias>
-            <ordinal>1</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Structure assignments (Prada Global (Merchandiser Structure))</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Structure assignments (Prada Global (Merchandiser Structure))]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Structure assignments (Prada Global (Merchandiser Structure))</remote-alias>
-            <ordinal>2</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Quality status (W2 Image)</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Quality status (W2 Image)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Quality status (W2 Image)</remote-alias>
-            <ordinal>3</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Quality status (Angle 1 hi)</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Quality status (Angle 1 hi)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Quality status (Angle 1 hi)</remote-alias>
-            <ordinal>4</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Delivery month</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Delivery month]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Delivery month</remote-alias>
-            <ordinal>5</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Delivery year</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Delivery year]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Delivery year</remote-alias>
-            <ordinal>6</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>15</precision>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Published PIM (global)</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Published PIM (global)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Published PIM (global)</remote-alias>
-            <ordinal>7</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Published WCS (global)</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Published WCS (global)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Published WCS (global)</remote-alias>
-            <ordinal>8</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Published PIM (Canada)</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Published PIM (Canada)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Published PIM (Canada)</remote-alias>
-            <ordinal>9</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Published WCS (Canada)</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Published WCS (Canada)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Published WCS (Canada)</remote-alias>
-            <ordinal>10</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Published PIM (China)</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Published PIM (China)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Published PIM (China)</remote-alias>
-            <ordinal>11</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Published WCS (China)</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Published WCS (China)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Published WCS (China)</remote-alias>
-            <ordinal>12</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Published PIM (Europe)</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Published PIM (Europe)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Published PIM (Europe)</remote-alias>
-            <ordinal>13</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Published WCS (Europe)</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Published WCS (Europe)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Published WCS (Europe)</remote-alias>
-            <ordinal>14</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Published PIM (Japan)</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Published PIM (Japan)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Published PIM (Japan)</remote-alias>
-            <ordinal>15</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Published WCS (Japan)</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Published WCS (Japan)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Published WCS (Japan)</remote-alias>
-            <ordinal>16</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Published PIM (United States)</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Published PIM (United States)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Published PIM (United States)</remote-alias>
-            <ordinal>17</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Published WCS (United States)</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Published WCS (United States)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Published WCS (United States)</remote-alias>
-            <ordinal>18</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Sale (Europe)</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Sale (Europe)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Sale (Europe)</remote-alias>
-            <ordinal>19</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Sale (United States)</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Sale (United States)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Sale (United States)</remote-alias>
-            <ordinal>20</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Sale (Canada)</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Sale (Canada)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Sale (Canada)</remote-alias>
-            <ordinal>21</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Sale (Japan)</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Sale (Japan)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Sale (Japan)</remote-alias>
-            <ordinal>22</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Sale (China)</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Sale (China)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Sale (China)</remote-alias>
-            <ordinal>23</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Stock Ecommerce (United States)</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Stock Ecommerce (United States)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Stock Ecommerce (United States)</remote-alias>
-            <ordinal>24</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Stock Store (United States)</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Stock Store (United States)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Stock Store (United States)</remote-alias>
-            <ordinal>25</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Stock Ecommerce (Europe)</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Stock Ecommerce (Europe)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Stock Ecommerce (Europe)</remote-alias>
-            <ordinal>26</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Stock Store (Europe)</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Stock Store (Europe)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Stock Store (Europe)</remote-alias>
-            <ordinal>27</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Stock Ecommerce (China)</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Stock Ecommerce (China)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Stock Ecommerce (China)</remote-alias>
-            <ordinal>28</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Stock Store (China)</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Stock Store (China)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Stock Store (China)</remote-alias>
-            <ordinal>29</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Stock Ecommerce (Japan)</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Stock Ecommerce (Japan)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Stock Ecommerce (Japan)</remote-alias>
-            <ordinal>30</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Stock Store (Japan)</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Stock Store (Japan)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Stock Store (Japan)</remote-alias>
-            <ordinal>31</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Stock Ecommerce (Canada)</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Stock Ecommerce (Canada)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Stock Ecommerce (Canada)</remote-alias>
-            <ordinal>32</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Stock Store (Canada)</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Stock Store (Canada)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Stock Store (Canada)</remote-alias>
-            <ordinal>33</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Product Lifecycle (Canada)</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Product Lifecycle (Canada)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Product Lifecycle (Canada)</remote-alias>
-            <ordinal>34</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Product Lifecycle (China)</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Product Lifecycle (China)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Product Lifecycle (China)</remote-alias>
-            <ordinal>35</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Product Lifecycle (Europe)</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Product Lifecycle (Europe)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Product Lifecycle (Europe)</remote-alias>
-            <ordinal>36</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Product Lifecycle (Japan)</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Product Lifecycle (Japan)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Product Lifecycle (Japan)</remote-alias>
-            <ordinal>37</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Product Lifecycle (United States)</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Product Lifecycle (United States)]</local-name>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias>Product Lifecycle (United States)</remote-alias>
-            <ordinal>38</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='capability'>
-            <remote-name />
-            <remote-type>0</remote-type>
-            <parent-name>[Sheet1]</parent-name>
-            <remote-alias />
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='integer' name='context'>0</attribute>
-              <attribute datatype='string' name='gridOrigin'>&quot;A1:AM10001:no:A1:AM10001:0&quot;</attribute>
-              <attribute datatype='boolean' name='header'>true</attribute>
-              <attribute datatype='integer' name='outcome'>6</attribute>
-            </attributes>
-          </metadata-record>
-        </metadata-records>
-      </connection>
-      <column datatype='integer' name='[Delivery month]' role='dimension' type='quantitative' />
-      <column datatype='real' name='[Delivery year]' role='dimension' type='quantitative' />
-      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
-        <calculation class='tableau' formula='1' />
-      </column>
-      <layout dim-ordering='alphabetic' dim-percentage='0.410214' measure-ordering='alphabetic' measure-percentage='0.209226' parameter-percentage='0.38056' show-structure='true' user-set-layout='true' />
-      <semantic-values>
-        <semantic-value key='[Country].[Name]' value='&quot;Italy&quot;' />
-      </semantic-values>
-      <date-options start-of-week='monday' />
-    </datasource>
     <datasource caption='Descriptions' inline='true' name='federated.051v3r11aejnjl10x45wh1h2eg6n' version='10.4'>
       <connection class='federated'>
         <named-connections>
@@ -3420,6 +2768,658 @@
         </groupfilter>
       </filter>
     </datasource>
+    <datasource caption='Master' inline='true' name='federated.0vrr0v40wqln8e1dxvmqy1g8t9tw' version='10.4'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Published PIM - master' name='excel-direct.14n4igt0xpd7yg1fhtnht1qmmjfn'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='K:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_report/raw data/Published PIM - master.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.14n4igt0xpd7yg1fhtnht1qmmjfn' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:AM10001:no:A1:AM10001:0' header='yes' outcome='6'>
+            <column datatype='string' name='Variant no.' ordinal='0' />
+            <column datatype='string' name='Brand' ordinal='1' />
+            <column datatype='string' name='Structure assignments (Prada Global (Merchandiser Structure))' ordinal='2' />
+            <column datatype='string' name='Quality status (W2 Image)' ordinal='3' />
+            <column datatype='string' name='Quality status (Angle 1 hi)' ordinal='4' />
+            <column datatype='integer' name='Delivery month' ordinal='5' />
+            <column datatype='real' name='Delivery year' ordinal='6' />
+            <column datatype='string' name='Published PIM (global)' ordinal='7' />
+            <column datatype='string' name='Published WCS (global)' ordinal='8' />
+            <column datatype='string' name='Published PIM (Canada)' ordinal='9' />
+            <column datatype='string' name='Published WCS (Canada)' ordinal='10' />
+            <column datatype='string' name='Published PIM (China)' ordinal='11' />
+            <column datatype='string' name='Published WCS (China)' ordinal='12' />
+            <column datatype='string' name='Published PIM (Europe)' ordinal='13' />
+            <column datatype='string' name='Published WCS (Europe)' ordinal='14' />
+            <column datatype='string' name='Published PIM (Japan)' ordinal='15' />
+            <column datatype='string' name='Published WCS (Japan)' ordinal='16' />
+            <column datatype='string' name='Published PIM (United States)' ordinal='17' />
+            <column datatype='string' name='Published WCS (United States)' ordinal='18' />
+            <column datatype='string' name='Sale (Europe)' ordinal='19' />
+            <column datatype='string' name='Sale (United States)' ordinal='20' />
+            <column datatype='string' name='Sale (Canada)' ordinal='21' />
+            <column datatype='string' name='Sale (Japan)' ordinal='22' />
+            <column datatype='string' name='Sale (China)' ordinal='23' />
+            <column datatype='integer' name='Stock Ecommerce (United States)' ordinal='24' />
+            <column datatype='integer' name='Stock Store (United States)' ordinal='25' />
+            <column datatype='integer' name='Stock Ecommerce (Europe)' ordinal='26' />
+            <column datatype='integer' name='Stock Store (Europe)' ordinal='27' />
+            <column datatype='integer' name='Stock Ecommerce (China)' ordinal='28' />
+            <column datatype='integer' name='Stock Store (China)' ordinal='29' />
+            <column datatype='integer' name='Stock Ecommerce (Japan)' ordinal='30' />
+            <column datatype='integer' name='Stock Store (Japan)' ordinal='31' />
+            <column datatype='integer' name='Stock Ecommerce (Canada)' ordinal='32' />
+            <column datatype='integer' name='Stock Store (Canada)' ordinal='33' />
+            <column datatype='string' name='Product Lifecycle (Canada)' ordinal='34' />
+            <column datatype='string' name='Product Lifecycle (China)' ordinal='35' />
+            <column datatype='string' name='Product Lifecycle (Europe)' ordinal='36' />
+            <column datatype='string' name='Product Lifecycle (Japan)' ordinal='37' />
+            <column datatype='string' name='Product Lifecycle (United States)' ordinal='38' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Variant no.</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Variant no.]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Variant no.</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Brand</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Brand]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Brand</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Structure assignments (Prada Global (Merchandiser Structure))</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Structure assignments (Prada Global (Merchandiser Structure))]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Structure assignments (Prada Global (Merchandiser Structure))</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Quality status (W2 Image)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Quality status (W2 Image)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Quality status (W2 Image)</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Quality status (Angle 1 hi)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Quality status (Angle 1 hi)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Quality status (Angle 1 hi)</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Delivery month</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Delivery month]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Delivery month</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Delivery year</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Delivery year]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Delivery year</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Published PIM (global)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Published PIM (global)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Published PIM (global)</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Published WCS (global)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Published WCS (global)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Published WCS (global)</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Published PIM (Canada)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Published PIM (Canada)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Published PIM (Canada)</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Published WCS (Canada)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Published WCS (Canada)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Published WCS (Canada)</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Published PIM (China)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Published PIM (China)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Published PIM (China)</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Published WCS (China)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Published WCS (China)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Published WCS (China)</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Published PIM (Europe)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Published PIM (Europe)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Published PIM (Europe)</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Published WCS (Europe)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Published WCS (Europe)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Published WCS (Europe)</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Published PIM (Japan)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Published PIM (Japan)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Published PIM (Japan)</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Published WCS (Japan)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Published WCS (Japan)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Published WCS (Japan)</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Published PIM (United States)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Published PIM (United States)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Published PIM (United States)</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Published WCS (United States)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Published WCS (United States)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Published WCS (United States)</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sale (Europe)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Sale (Europe)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Sale (Europe)</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sale (United States)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Sale (United States)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Sale (United States)</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sale (Canada)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Sale (Canada)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Sale (Canada)</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sale (Japan)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Sale (Japan)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Sale (Japan)</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sale (China)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Sale (China)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Sale (China)</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Stock Ecommerce (United States)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Stock Ecommerce (United States)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Stock Ecommerce (United States)</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Stock Store (United States)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Stock Store (United States)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Stock Store (United States)</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Stock Ecommerce (Europe)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Stock Ecommerce (Europe)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Stock Ecommerce (Europe)</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Stock Store (Europe)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Stock Store (Europe)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Stock Store (Europe)</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Stock Ecommerce (China)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Stock Ecommerce (China)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Stock Ecommerce (China)</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Stock Store (China)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Stock Store (China)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Stock Store (China)</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Stock Ecommerce (Japan)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Stock Ecommerce (Japan)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Stock Ecommerce (Japan)</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Stock Store (Japan)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Stock Store (Japan)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Stock Store (Japan)</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Stock Ecommerce (Canada)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Stock Ecommerce (Canada)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Stock Ecommerce (Canada)</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Stock Store (Canada)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Stock Store (Canada)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Stock Store (Canada)</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product Lifecycle (Canada)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Product Lifecycle (Canada)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Product Lifecycle (Canada)</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product Lifecycle (China)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Product Lifecycle (China)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Product Lifecycle (China)</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product Lifecycle (Europe)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Product Lifecycle (Europe)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Product Lifecycle (Europe)</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product Lifecycle (Japan)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Product Lifecycle (Japan)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Product Lifecycle (Japan)</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product Lifecycle (United States)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Product Lifecycle (United States)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Product Lifecycle (United States)</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:AM10001:no:A1:AM10001:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='integer' name='[Delivery month]' role='dimension' type='quantitative' />
+      <column datatype='real' name='[Delivery year]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.410468' measure-ordering='alphabetic' measure-percentage='0.207989' parameter-percentage='0.381543' show-structure='true' user-set-layout='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Italy&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+    </datasource>
   </datasources>
   <actions>
     <action caption='Filter 1 (generated)' name='[Action1]'>
@@ -5124,7 +5124,7 @@
       </datasource-dependencies>
       <zones>
         <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
-          <zone h='53189' id='16' param='vert' type='layout-flow' w='88044' x='483' y='911'>
+          <zone h='53188' id='16' param='vert' type='layout-flow' w='88044' x='483' y='911'>
             <zone h='5240' id='15' type='title' w='88044' x='483' y='911'>
               <zone-style>
                 <format attr='border-color' value='#000000' />
@@ -5136,8 +5136,8 @@
                 <format attr='margin-left' value='0' />
               </zone-style>
             </zone>
-            <zone h='47949' id='5' param='horz' type='layout-flow' w='88044' x='483' y='6151'>
-              <zone h='47949' id='3' type='layout-basic' w='88044' x='483' y='6151'>
+            <zone h='47948' id='5' param='horz' type='layout-flow' w='88044' x='483' y='6151'>
+              <zone h='47948' id='3' type='layout-basic' w='88044' x='483' y='6151'>
                 <zone h='22892' id='1' name='Merchandisers' w='39587' x='483' y='6151'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -5155,7 +5155,7 @@
                     <format attr='margin' value='4' />
                   </zone-style>
                 </zone>
-                <zone h='25057' id='11' name='English' w='39587' x='483' y='29043'>
+                <zone h='25056' id='11' name='English' w='39587' x='483' y='29043'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -5164,7 +5164,7 @@
                     <format attr='margin-left' value='0' />
                   </zone-style>
                 </zone>
-                <zone h='25078' id='12' name='Specific Language' w='48457' x='40070' y='29022'>
+                <zone h='25077' id='12' name='Specific Language' w='48457' x='40070' y='29022'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -5175,7 +5175,7 @@
               </zone>
             </zone>
           </zone>
-          <zone h='44989' id='17' name='Published WCS' w='23933' x='64594' y='54100'>
+          <zone h='44990' id='17' name='Published WCS' w='23933' x='64594' y='54099'>
             <zone-style>
               <format attr='border-color' value='#000000' />
               <format attr='border-style' value='none' />
@@ -5185,7 +5185,7 @@
               <format attr='margin-bottom' value='0' />
             </zone-style>
           </zone>
-          <zone h='44989' id='14' name='Product SKU List' w='32282' x='32312' y='54100'>
+          <zone h='44990' id='14' name='Product SKU List' w='32282' x='32312' y='54099'>
             <zone-style>
               <format attr='border-color' value='#000000' />
               <format attr='border-style' value='none' />
@@ -5194,7 +5194,7 @@
               <format attr='margin-bottom' value='0' />
             </zone-style>
           </zone>
-          <zone h='44989' id='13' name='Variant SKU List' w='31829' x='483' y='54100'>
+          <zone h='44990' id='13' name='Variant SKU List' w='31829' x='483' y='54099'>
             <zone-style>
               <format attr='border-color' value='#000000' />
               <format attr='border-style' value='none' />
@@ -5204,8 +5204,8 @@
               <format attr='margin-left' value='0' />
             </zone-style>
           </zone>
-          <zone h='49101' id='22' param='vert' type='layout-flow' w='10990' x='88527' y='49988'>
-            <zone h='9339' id='9' mode='list' param='[Parameters].[Parameter 3]' type='paramctrl' w='10990' x='88527' y='49988'>
+          <zone h='49102' id='22' param='vert' type='layout-flow' w='10990' x='88527' y='49987'>
+            <zone h='9339' id='9' mode='list' param='[Parameters].[Parameter 3]' type='paramctrl' w='10990' x='88527' y='49987'>
               <zone-style>
                 <format attr='border-color' value='#000000' />
                 <format attr='border-style' value='none' />
@@ -5214,7 +5214,7 @@
                 <format attr='margin-right' value='0' />
               </zone-style>
             </zone>
-            <zone h='19818' id='18' name='Italian' param='[federated.0hb7y710j4x6hv19oi0wp1h1nu5u].[none:Published WCS (copy):ok]' type='filter' w='10990' x='88527' y='59327'>
+            <zone h='19818' id='18' name='Italian' param='[federated.0hb7y710j4x6hv19oi0wp1h1nu5u].[none:Published WCS (copy):ok]' type='filter' w='10990' x='88527' y='59326'>
               <zone-style>
                 <format attr='border-color' value='#000000' />
                 <format attr='border-style' value='none' />
@@ -5223,7 +5223,7 @@
                 <format attr='margin-right' value='0' />
               </zone-style>
             </zone>
-            <zone h='19818' id='19' name='Italian' param='[federated.0hb7y710j4x6hv19oi0wp1h1nu5u].[none:Stock Ecommerce Availability (copy):ok]' type='filter' w='10990' x='88527' y='79145'>
+            <zone h='19818' id='19' name='Italian' param='[federated.0hb7y710j4x6hv19oi0wp1h1nu5u].[none:Stock Ecommerce Availability (copy):ok]' type='filter' w='10990' x='88527' y='79144'>
               <zone-style>
                 <format attr='border-color' value='#000000' />
                 <format attr='border-style' value='none' />
@@ -5233,7 +5233,7 @@
               </zone-style>
             </zone>
           </zone>
-          <zone h='28179' id='7' mode='list' param='[Parameters].[Parameter 1]' type='paramctrl' w='10990' x='88527' y='21809'>
+          <zone h='28179' id='7' mode='list' param='[Parameters].[Parameter 1]' type='paramctrl' w='10990' x='88527' y='21808'>
             <zone-style>
               <format attr='border-color' value='#000000' />
               <format attr='border-style' value='none' />
@@ -5242,7 +5242,7 @@
               <format attr='margin-right' value='0' />
             </zone-style>
           </zone>
-          <zone h='20898' id='8' mode='list' param='[Parameters].[Parameter 2]' type='paramctrl' w='10990' x='88527' y='911'>
+          <zone h='20897' id='8' mode='list' param='[Parameters].[Parameter 2]' type='paramctrl' w='10990' x='88527' y='911'>
             <zone-style>
               <format attr='border-color' value='#000000' />
               <format attr='border-style' value='none' />
