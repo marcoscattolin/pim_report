@@ -11,14 +11,16 @@ clx <- read_excel("k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_r
 anagrafica <- read_csv2("k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_report/raw data/FLUIID4_ANAGRAFICA_TOT.CSV", col_types = cols(.default = col_character()))
 
 
+output_file <- "k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_report/raw data/clx_reshape.csv"
+
 anagrafica %>% 
         select(ID_ARTICOLO,SKUs) %>% 
-        mutate(rev_sku = str_split(string = SKUs, pattern = ",")) %>% 
-        unnest(rev_sku) %>% 
+        mutate(sku = str_split(string = SKUs, pattern = ",")) %>% 
+        unnest(sku) %>% 
         select(-SKUs) %>% 
-        left_join(clx,., by = c("uid" = "ID_ARTICOLO")) %>% 
-        View()
+        left_join(clx %>% select(-sku), by = c("ID_ARTICOLO" = "uid")) %>% 
+        distinct() %>% 
+        write.csv(na = "", row.names = F, file = output_file)
 
 
 
-# test commit
