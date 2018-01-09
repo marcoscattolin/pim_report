@@ -22,7 +22,7 @@ anagrafica <- anagrafica %>%
 
 # FILTER OUT INVALID PLACEHOLDERS  ----------------------------------------
 clx <- clx %>% 
-        separate(col = "file_name",into = c("tmp","placeholder"), extra = "drop", sep = "_") %>% 
+        separate(col = "file_name",into = c("tmp","placeholder"), extra = "drop", sep = "_", remove = F) %>% 
         select(-tmp) %>% 
         filter(nchar(placeholder) == 3)
 
