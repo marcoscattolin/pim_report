@@ -41,221 +41,6 @@
         </members>
       </column>
     </datasource>
-    <datasource caption='Scatti' inline='true' name='federated.0y7y4ay1mgidib1dfgoz70ugm10r' version='10.4'>
-      <connection class='federated'>
-        <named-connections>
-          <named-connection caption='Prada_report' name='excel-direct.0o6qfmt1tcs8171ew4wy60jsbb81'>
-            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='K:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_report/raw data/Prada_report.xlsx' interpretationMode='0' password='' server='' validate='no' />
-          </named-connection>
-        </named-connections>
-        <relation all='true' name='Prada+' type='union'>
-          <columns header='yes'>
-            <column datatype='string' name='uid' />
-            <column datatype='string' name='sku' />
-            <column datatype='string' name='marchio' />
-            <column datatype='string' name='product_status' />
-            <column datatype='string' name='file_name' />
-            <column datatype='string' name='asset_status' />
-            <column datatype='string' name='Shooting' />
-            <column datatype='string' name='Asset Rule' />
-            <column datatype='string' name='Sent to Prada' />
-            <column datatype='string' name='Sheet' />
-            <column datatype='string' name='Table Name' />
-          </columns>
-          <relation connection='excel-direct.0o6qfmt1tcs8171ew4wy60jsbb81' name='Prada' table='[Prada$]' type='table'>
-            <columns gridOrigin='A1:I10001:no:A1:I10001:0' header='yes' outcome='6'>
-              <column datatype='string' name='uid' ordinal='0' />
-              <column datatype='string' name='sku' ordinal='1' />
-              <column datatype='string' name='marchio' ordinal='2' />
-              <column datatype='string' name='product_status' ordinal='3' />
-              <column datatype='string' name='file_name' ordinal='4' />
-              <column datatype='string' name='asset_status' ordinal='5' />
-              <column datatype='string' name='Shooting' ordinal='6' />
-              <column datatype='string' name='Asset Rule' ordinal='7' />
-              <column datatype='string' name='Sent to Prada' ordinal='8' />
-            </columns>
-          </relation>
-          <relation connection='excel-direct.0o6qfmt1tcs8171ew4wy60jsbb81' name='Miu Miu' table='[&apos;Miu Miu$&apos;]' type='table'>
-            <columns gridOrigin='A1:I10001:no:A1:I10001:0' header='yes' outcome='6'>
-              <column datatype='string' name='uid' ordinal='0' />
-              <column datatype='string' name='sku' ordinal='1' />
-              <column datatype='string' name='marchio' ordinal='2' />
-              <column datatype='string' name='product_status' ordinal='3' />
-              <column datatype='string' name='file_name' ordinal='4' />
-              <column datatype='string' name='asset_status' ordinal='5' />
-              <column datatype='string' name='Shooting' ordinal='6' />
-              <column datatype='string' name='Asset Rule' ordinal='7' />
-              <column datatype='string' name='Sent to Prada' ordinal='8' />
-            </columns>
-          </relation>
-        </relation>
-        <metadata-records>
-          <metadata-record class='capability'>
-            <remote-name />
-            <remote-type>0</remote-type>
-            <parent-name>[Prada+]</parent-name>
-            <remote-alias />
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>uid</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[uid]</local-name>
-            <parent-name>[Prada+]</parent-name>
-            <remote-alias>uid</remote-alias>
-            <ordinal>0</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>sku</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[sku]</local-name>
-            <parent-name>[Prada+]</parent-name>
-            <remote-alias>sku</remote-alias>
-            <ordinal>1</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>marchio</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[marchio]</local-name>
-            <parent-name>[Prada+]</parent-name>
-            <remote-alias>marchio</remote-alias>
-            <ordinal>2</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>product_status</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[product_status]</local-name>
-            <parent-name>[Prada+]</parent-name>
-            <remote-alias>product_status</remote-alias>
-            <ordinal>3</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>file_name</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[file_name]</local-name>
-            <parent-name>[Prada+]</parent-name>
-            <remote-alias>file_name</remote-alias>
-            <ordinal>4</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>asset_status</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[asset_status]</local-name>
-            <parent-name>[Prada+]</parent-name>
-            <remote-alias>asset_status</remote-alias>
-            <ordinal>5</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Shooting</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Shooting]</local-name>
-            <parent-name>[Prada+]</parent-name>
-            <remote-alias>Shooting</remote-alias>
-            <ordinal>6</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Asset Rule</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Asset Rule]</local-name>
-            <parent-name>[Prada+]</parent-name>
-            <remote-alias>Asset Rule</remote-alias>
-            <ordinal>7</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Sent to Prada</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Sent to Prada]</local-name>
-            <parent-name>[Prada+]</parent-name>
-            <remote-alias>Sent to Prada</remote-alias>
-            <ordinal>8</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Sheet</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[Sheet]</local-name>
-            <parent-name>[Prada+]</parent-name>
-            <remote-alias>Sheet</remote-alias>
-            <ordinal>9</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Table Name</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[Table Name]</local-name>
-            <parent-name>[Prada+]</parent-name>
-            <remote-alias>Table Name</remote-alias>
-            <ordinal>10</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LIT_RIT_S2' />
-          </metadata-record>
-        </metadata-records>
-      </connection>
-      <aliases enabled='yes' />
-      <column caption='Calculation1' datatype='string' name='[Calculation_711568763546963970]' role='dimension' type='nominal'>
-        <calculation class='tableau' formula='split([file_name],&quot;_&quot;,2)' />
-      </column>
-      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
-        <calculation class='tableau' formula='1' />
-      </column>
-      <column datatype='string' name='[asset_status]' role='dimension' type='nominal' />
-      <layout dim-ordering='alphabetic' dim-percentage='0.605375' measure-ordering='alphabetic' measure-percentage='0.178218' parameter-percentage='0.216407' show-structure='true' />
-      <semantic-values>
-        <semantic-value key='[Country].[Name]' value='&quot;Italy&quot;' />
-      </semantic-values>
-      <date-options start-of-week='monday' />
-      <filter class='categorical' column='[asset_status]' filter-group='2'>
-        <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
-          <groupfilter function='level-members' level='[asset_status]' />
-          <groupfilter function='union'>
-            <groupfilter function='member' level='[asset_status]' member='&quot;Alternative&quot;' />
-            <groupfilter function='member' level='[asset_status]' member='&quot;Contributi&quot;' />
-            <groupfilter function='member' level='[asset_status]' member='&quot;Contributi lavorati&quot;' />
-          </groupfilter>
-        </groupfilter>
-      </filter>
-    </datasource>
     <datasource caption='Master' inline='true' name='federated.0vrr0v40wqln8e1dxvmqy1g8t9tw' version='10.4'>
       <connection class='federated'>
         <named-connections>
@@ -1628,7 +1413,7 @@
       <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
         <calculation class='tableau' formula='1' />
       </column>
-      <layout dim-ordering='alphabetic' dim-percentage='0.806223' measure-ordering='alphabetic' measure-percentage='0.0777935' parameter-percentage='0.115983' show-structure='true' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.845133' measure-ordering='alphabetic' measure-percentage='0.0619469' parameter-percentage='0.0929204' show-structure='true' />
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;Italy&quot;' />
       </semantic-values>
@@ -1761,10 +1546,11 @@
               <column datatype='string' name='marchio' ordinal='2' />
               <column datatype='string' name='product_status' ordinal='3' />
               <column datatype='string' name='file_name' ordinal='4' />
-              <column datatype='string' name='asset_status' ordinal='5' />
-              <column datatype='string' name='Shooting' ordinal='6' />
-              <column datatype='string' name='Asset Rule' ordinal='7' />
-              <column datatype='string' name='Sent to Prada' ordinal='8' />
+              <column datatype='string' name='placeholder' ordinal='5' />
+              <column datatype='string' name='asset_status' ordinal='6' />
+              <column datatype='string' name='Shooting' ordinal='7' />
+              <column datatype='string' name='Asset Rule' ordinal='8' />
+              <column datatype='string' name='Sent to Prada' ordinal='9' />
             </columns>
           </relation>
         </relation>
@@ -1846,6 +1632,7 @@
           <map key='[asset_status]' value='[clx_reshape.csv].[asset_status]' />
           <map key='[file_name]' value='[clx_reshape.csv].[file_name]' />
           <map key='[marchio]' value='[clx_reshape.csv].[marchio]' />
+          <map key='[placeholder]' value='[clx_reshape.csv].[placeholder]' />
           <map key='[product_status]' value='[clx_reshape.csv].[product_status]' />
           <map key='[sku]' value='[clx_reshape.csv].[sku]' />
         </cols>
@@ -3216,12 +3003,33 @@
             </attributes>
           </metadata-record>
           <metadata-record class='column'>
+            <remote-name>placeholder</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[placeholder]</local-name>
+            <parent-name>[clx_reshape.csv]</parent-name>
+            <remote-alias>placeholder</remote-alias>
+            <ordinal>75</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LIT_RIT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;it&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
             <remote-name>asset_status</remote-name>
             <remote-type>129</remote-type>
             <local-name>[asset_status]</local-name>
             <parent-name>[clx_reshape.csv]</parent-name>
             <remote-alias>asset_status</remote-alias>
-            <ordinal>75</ordinal>
+            <ordinal>76</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
             <scale>1</scale>
@@ -3242,7 +3050,7 @@
             <local-name>[Shooting]</local-name>
             <parent-name>[clx_reshape.csv]</parent-name>
             <remote-alias>Shooting</remote-alias>
-            <ordinal>76</ordinal>
+            <ordinal>77</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
             <scale>1</scale>
@@ -3263,7 +3071,7 @@
             <local-name>[Asset Rule]</local-name>
             <parent-name>[clx_reshape.csv]</parent-name>
             <remote-alias>Asset Rule</remote-alias>
-            <ordinal>77</ordinal>
+            <ordinal>78</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
             <scale>1</scale>
@@ -3284,7 +3092,7 @@
             <local-name>[Sent to Prada]</local-name>
             <parent-name>[clx_reshape.csv]</parent-name>
             <remote-alias>Sent to Prada</remote-alias>
-            <ordinal>78</ordinal>
+            <ordinal>79</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
             <approx-count>1</approx-count>
@@ -3337,10 +3145,7 @@
         <calculation class='tableau' formula='CASE [Parameters].[Parameter 3]&#13;&#10;when &quot;W2 Image&quot; then [Quality status (W2 Image)] &#13;&#10;when &quot;Angle Hi&quot; then [Quality status (Angle 1 hi)]&#13;&#10;END' />
       </column>
       <column caption='# of Pictures' datatype='integer' name='[Calculation_826129079390806016]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='COUNTD([file_name])' />
-      </column>
-      <column caption='Placeholder' datatype='string' name='[Calculation_826129079390949377]' role='dimension' type='nominal'>
-        <calculation class='tableau' formula='SPLIT([file_name],&quot;_&quot;,2)' />
+        <calculation class='tableau' formula='COUNTD([sku]+&quot;_&quot;+[file_name])' />
       </column>
       <column datatype='integer' name='[Delivery month]' role='dimension' type='ordinal' />
       <column datatype='real' name='[Delivery year]' role='dimension' type='ordinal' />
@@ -3629,7 +3434,7 @@
       <folder name='SKU&apos;s w/color' role='measures'>
         <folder-item name='[Number of edit SKU&apos;s (copy)]' type='field' />
       </folder>
-      <layout dim-ordering='alphabetic' dim-percentage='0.562963' measure-ordering='alphabetic' measure-percentage='0.308148' parameter-percentage='0.128889' show-structure='false' user-set-layout='true' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.576865' measure-ordering='alphabetic' measure-percentage='0.30898' parameter-percentage='0.114155' show-structure='false' user-set-layout='true' />
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;Italy&quot;' />
       </semantic-values>
@@ -3663,6 +3468,273 @@
           <groupfilter from='0' function='range' level='[none:Stock Ecommerce Availability (copy):ok]' to='999' />
         </groupfilter>
       </filter>
+    </datasource>
+    <datasource caption='Scatti' inline='true' name='federated.07fogcf11deljy15vfu0p04ms6wc' version='10.4'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='clx_reshape' name='textscan.1ibuoww1hofqjd1em14r71slegr7'>
+            <connection class='textscan' directory='K:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_report/raw data' filename='clx_reshape.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1ibuoww1hofqjd1em14r71slegr7' name='clx_reshape.csv' table='[clx_reshape#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='ID_ARTICOLO' ordinal='0' />
+            <column datatype='string' name='sku' ordinal='1' />
+            <column datatype='string' name='marchio' ordinal='2' />
+            <column datatype='string' name='product_status' ordinal='3' />
+            <column datatype='string' name='file_name' ordinal='4' />
+            <column datatype='string' name='placeholder' ordinal='5' />
+            <column datatype='string' name='asset_status' ordinal='6' />
+            <column datatype='string' name='Shooting' ordinal='7' />
+            <column datatype='string' name='Asset Rule' ordinal='8' />
+            <column datatype='string' name='Sent to Prada' ordinal='9' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>ID_ARTICOLO</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ID_ARTICOLO]</local-name>
+            <parent-name>[clx_reshape.csv]</parent-name>
+            <remote-alias>ID_ARTICOLO</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sku</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[sku]</local-name>
+            <parent-name>[clx_reshape.csv]</parent-name>
+            <remote-alias>sku</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>marchio</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[marchio]</local-name>
+            <parent-name>[clx_reshape.csv]</parent-name>
+            <remote-alias>marchio</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[product_status]</local-name>
+            <parent-name>[clx_reshape.csv]</parent-name>
+            <remote-alias>product_status</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>file_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[file_name]</local-name>
+            <parent-name>[clx_reshape.csv]</parent-name>
+            <remote-alias>file_name</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>placeholder</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[placeholder]</local-name>
+            <parent-name>[clx_reshape.csv]</parent-name>
+            <remote-alias>placeholder</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>asset_status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[asset_status]</local-name>
+            <parent-name>[clx_reshape.csv]</parent-name>
+            <remote-alias>asset_status</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Shooting</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Shooting]</local-name>
+            <parent-name>[clx_reshape.csv]</parent-name>
+            <remote-alias>Shooting</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Asset Rule</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Asset Rule]</local-name>
+            <parent-name>[clx_reshape.csv]</parent-name>
+            <remote-alias>Asset Rule</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sent to Prada</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Sent to Prada]</local-name>
+            <parent-name>[clx_reshape.csv]</parent-name>
+            <remote-alias>Sent to Prada</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[clx_reshape.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Calculation1' datatype='integer' name='[Calculation_636696420112412673]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD([sku]+&quot;_&quot;+[file_name])' />
+      </column>
+      <column caption='Calc2' datatype='string' name='[Calculation_636696420112781314]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[sku]+&quot;_&quot;+[file_name]' />
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.525114' measure-ordering='alphabetic' measure-percentage='0.237443' parameter-percentage='0.237443' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Italy&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
     </datasource>
   </datasources>
   <actions>
@@ -4855,20 +4927,16 @@
       <table>
         <view>
           <datasources>
-            <datasource caption='Joined Datasets w. color' name='federated.0hb7y710j4x6hv19oi0wp1h1nu5u' />
+            <datasource caption='Scatti' name='federated.07fogcf11deljy15vfu0p04ms6wc' />
           </datasources>
-          <datasource-dependencies datasource='federated.0hb7y710j4x6hv19oi0wp1h1nu5u'>
-            <column caption='# of Pictures' datatype='integer' name='[Calculation_826129079390806016]' role='measure' type='quantitative'>
-              <calculation class='tableau' formula='COUNTD([file_name])' />
-            </column>
-            <column caption='Placeholder' datatype='string' name='[Calculation_826129079390949377]' role='dimension' type='nominal'>
-              <calculation class='tableau' formula='SPLIT([file_name],&quot;_&quot;,2)' />
+          <datasource-dependencies datasource='federated.07fogcf11deljy15vfu0p04ms6wc'>
+            <column caption='Calculation1' datatype='integer' name='[Calculation_636696420112412673]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([sku]+&quot;_&quot;+[file_name])' />
             </column>
             <column datatype='string' name='[file_name]' role='dimension' type='nominal' />
-            <column-instance column='[Calculation_826129079390949377]' derivation='None' name='[none:Calculation_826129079390949377:nk]' pivot='key' type='nominal' />
-            <column-instance column='[Calculation_826129079390806016]' derivation='User' name='[usr:Calculation_826129079390806016:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[sku]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_636696420112412673]' derivation='User' name='[usr:Calculation_636696420112412673:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
-          <sort class='computed' column='[federated.0hb7y710j4x6hv19oi0wp1h1nu5u].[none:Calculation_826129079390949377:nk]' direction='DESC' using='[federated.0hb7y710j4x6hv19oi0wp1h1nu5u].[usr:Calculation_826129079390806016:qk]' />
           <aggregation value='true' />
         </view>
         <style />
@@ -4879,7 +4947,7 @@
             </view>
             <mark class='Automatic' />
             <encodings>
-              <text column='[federated.0hb7y710j4x6hv19oi0wp1h1nu5u].[usr:Calculation_826129079390806016:qk]' />
+              <text column='[federated.07fogcf11deljy15vfu0p04ms6wc].[usr:Calculation_636696420112412673:qk]' />
             </encodings>
             <style>
               <style-rule element='mark'>
@@ -4888,7 +4956,7 @@
             </style>
           </pane>
         </panes>
-        <rows>[federated.0hb7y710j4x6hv19oi0wp1h1nu5u].[none:Calculation_826129079390949377:nk]</rows>
+        <rows />
         <cols />
       </table>
     </worksheet>
@@ -5550,7 +5618,7 @@
       </zones>
     </dashboard>
   </dashboards>
-  <windows saved-dpi-scale-factor='1.25' source-height='58'>
+  <windows source-height='93'>
     <window class='dashboard' name='Dashboard 1'>
       <viewpoints>
         <viewpoint name='English'>
@@ -5785,7 +5853,7 @@
         <default-map-tool-selection tool='2' />
       </viewpoint>
     </window>
-    <window class='worksheet' name='Variant SKU List'>
+    <window class='worksheet' maximized='true' name='Variant SKU List'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -5862,7 +5930,7 @@
     <window class='worksheet' name='Published WCS'>
       <cards>
         <edge name='left'>
-          <strip size='200'>
+          <strip size='250'>
             <card type='pages' />
             <card type='filters' />
             <card type='marks' />
@@ -5889,10 +5957,10 @@
         </highlight>
       </viewpoint>
     </window>
-    <window class='worksheet' maximized='true' name='Sheet 8'>
+    <window class='worksheet' name='Sheet 8'>
       <cards>
         <edge name='left'>
-          <strip size='200'>
+          <strip size='160'>
             <card type='pages' />
             <card type='filters' />
             <card type='marks' />
@@ -5905,18 +5973,11 @@
           <strip size='2147483647'>
             <card type='rows' />
           </strip>
-          <strip size='2147483647'>
+          <strip size='31'>
             <card type='title' />
           </strip>
         </edge>
       </cards>
-      <viewpoint>
-        <highlight>
-          <color-one-way>
-            <field>[federated.0hb7y710j4x6hv19oi0wp1h1nu5u].[none:Calculation_826129079391223810:ok]</field>
-          </color-one-way>
-        </highlight>
-      </viewpoint>
     </window>
   </windows>
   <thumbnails>
@@ -7614,163 +7675,29 @@
       pmdh0EDRSvCoCfRR1C41s3ODY9FzmL/pMJe0emwc3PCf/hFBxavFSeFCAALL5v8BTvqnLXMT
       km0AAAAASUVORK5CYII=
     </thumbnail>
-    <thumbnail height='192' name='Sheet 8' width='144'>
-      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
+    <thumbnail height='25' name='Sheet 8' width='84'>
+      iVBORw0KGgoAAAANSUhEUgAAAFQAAAAZCAYAAACvrQlzAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAAEQUlEQVRoge1ZUUhbVxj+WgIVlwe3sZCmzIc+iNi8JZCQDBOMzI1KpKjdjFZmWgqNM3vY
+      JDJl6VjYZPrQFiq7gT7UoWwSUugsK0u6lq22ptPOCkZZl2wTjS5mmnY3otwL/x5M3E3QKOud
+      k3E/OC///e7/nfOdc/77wz1ARAQJouHgfz2B/xskQ0WGZKjIkAwVGZKhIkMyVGRIhooMyVCR
+      IRkqMiRDRYZkqMiQDBUZkqEiY+8N5RN44HXgNX0HglsTkHjghbPGBL1WC63RgiZ3EAsCRtR7
+      ElqtVjBOwhvdXjI57UP3mVpYjGm+0YIm9w38up7De+iFs9oIrVYLY7UT3ofJnExBdGTppkeH
+      YCW0Z+BoKcTQuapyqv3ARc0aFwW2YK0EXFRV00nDj1niiIhj5+jH/uv0g4ATcJnoo/u7173d
+      00YXb01TguU2IuxjGu6sIYPzOv2ZoUWuUIOhgS4/YokjjthHl6nB0EBXIoJUEYbqWwbo9zxq
+      e2jobeo5x9DIwhoRBci1paFTdPFECw3M58sTIaa+hQbyrWo34L6mdzfnwNHd8xZqvbaSRVm5
+      1kqW83eJywQCLjLtsJN7eOXNeK/vLAzKQ9tTRv3wq6ywqvLliSLKqqFWPNts+HAYP5WVoQwA
+      EEYoVIrKyqIsTlFlJUpDIYQzytEo1Gp13rz76qMUj0bxguogbnafQY1Jv1HLLE1w35wDnyHN
+      zmI2Pgh7un7VOi/huzk+X1oBeKT+mMH9z7vw5vvzsH9sw8bexRFfVUIpz6HLlVCuxhHflJ7F
+      qMecrp16mKqa4PZNQ1hpZf949f8CWJYFikpR57CirkMQ/+odmLpOYMRjBortGByzC97iMfJh
+      JWwv92PQXryDggyHCl7C80eKcbTgS/i/iaLaXrJrE8yeUYx5coKxfjTrB2Af9cCMfXZCj5aU
+      IBYOg82Jy48dw5GnT7G65VsyHD6sAM/v7pTKnnsRpRVn8ekXPVD7ujEUBwAFFIWLWMwVZhex
+      WKhA3uqiUkHF85s3aF8ZCq0OujE//LHsMDs5ibhCgUIAbDKJbOt4LCzEIZfn3tcdIJNDXpBA
+      IgEAZdDpZhAMZrdJyWAQMzpdus4mkcztogAgFkNMLkdGfX8ZKn8drXYejMODW4vrAHikfvah
+      87NlNNv0AIBlvxPVjkv4duYJ1gHc8zrg/v4VNFu3O0d30PtWN3wTv+FJuu/kU/O45+2FnzfD
+      XAIAMhhP2bDc40DfZAo8eKQm++DoWYbtlDFdEibQW1MHt28C8yk+Pbcb6HIw4Jtt0GfknrH5
+      2D0CLtJoNFuPeob+bvfWaGqond4o15FGoyHD8TZixoXtzBr9MvwJnbaWk06jIevpC3RniRM8
+      jxBTr6F6JiLgX6C3G1+lcl1az1BBje1XaTy7S6KVcYbajhu20SXilkJ0tb2RKgwbeQwVjdQ+
+      NEVrAs4BIum/vJj4C5iag1ds3HeHAAAAAElFTkSuQmCC
     </thumbnail>
     <thumbnail height='169' name='Specific Language' width='192'>
       iVBORw0KGgoAAAANSUhEUgAAAMAAAACpCAYAAAB9JzKVAAAACXBIWXMAABJ0AAASdAHeZh94
