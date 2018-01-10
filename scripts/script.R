@@ -10,6 +10,15 @@ clx <- read_excel("k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_r
         bind_rows(read_excel("k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_report/raw data/Prada_report.xlsx", sheet = "Miu Miu"))
 
 anagrafica <- read_csv2("k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_report/raw data/FLUIID4_ANAGRAFICA_TOT.CSV",quote = "", col_types = cols(.default = col_character()))
+descrizioni <- read_csv2("k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_report/raw data/ProductTextEnrichment.csv", col_types = cols(.default = col_character()))
+pim <- read_excel("k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_report/raw data/Published PIM - master.xlsx", sheet = "Sheet1")
+
+
+# GENERATE PRODUCT ID ----------------------------------------------------
+pim <- pim %>% 
+        separate(col = `Variant no.`, into = c("col1","col2","col3"), remove = F, sep = "_", extra = "drop") %>% 
+        select(-col1,-col2) %>% 
+        mutate(product_id = str_replace(`Variant no.`,paste0(col3,"_"),""))
 
 
 
@@ -29,10 +38,9 @@ clx <- clx %>%
 
 
 
-# WRITE FILES -------------------------------------------------------------
-output_file <- "k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_report/raw data/clx_reshape.csv"
 
-out <- anagrafica %>% 
+# RESHAPE OUTFILE ---------------------------------------------------------
+clx <- anagrafica %>% 
         select(ID_ARTICOLO,SKUs) %>% 
         mutate(sku = str_split(string = SKUs, pattern = ",")) %>% 
         unnest(sku) %>% 
@@ -41,8 +49,45 @@ out <- anagrafica %>%
         distinct() 
 
 
+
+# GROUP BY PRODUCT --------------------------------------------------------
+clx <- clx %>% 
+        separate(col = sku, into = c("col1","col2","col3"), remove = F, sep = "-", extra = "drop") %>% 
+        select(-col1,-col2) %>% 
+        mutate(product_id = str_replace(sku,paste0(col3,"-"),"")) %>% 
+        mutate(product_id = gsub("-","_",product_id))
+
+
+clx <- clx %>% 
+        select(product_id,Shooting) %>% 
+        mutate(shooting = case_when(grepl("iniziare",Shooting, ignore.case = T) ~ "No Foto", TRUE ~ "Foto Presenti")) %>% 
+        group_by(product_id) %>% 
+        arrange(product_id,shooting) %>% 
+        summarise(shooting = first(shooting)) 
+
+
+
+# MERGE FILES -------------------------------------------------------------
+pim <- pim %>% 
+        mutate(product_id = gsub("_F[0-9]{4}_","_",`Variant no.`))
+
+
+
+out <- pim %>% 
+        left_join(clx, by = "product_id") %>% 
+        left_join(descrizioni, by = c("product_id" = "Product ID"))
+
+
+
+# WRITE FILES -------------------------------------------------------------
+output_file <- "k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_report/raw data/pim_report.csv"
+
+
+
 out %>% 
-        write.csv(na = "", row.names = F, file = output_file)
+        write.csv(na = "", row.names = F, file = output_file, fileEncoding = "UTF-8")
+
+pim %>% count(col3) %>% View()
 
 
-
+table(pim$`Published PIM (Canada)`,pim$`Published WCS (Canada)`)
