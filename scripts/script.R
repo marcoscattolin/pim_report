@@ -14,12 +14,17 @@ descrizioni <- read_csv2("k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerc
 pim <- read_excel("k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_report/raw data/Published PIM - master.xlsx", sheet = "Sheet1")
 
 
+############## PIM MANIPULATE ####################
+
+
 # GENERATE PRODUCT ID ----------------------------------------------------
 pim <- pim %>% 
         separate(col = `Variant no.`, into = c("col1","col2","col3"), remove = F, sep = "_", extra = "drop") %>% 
         select(-col1,-col2) %>% 
         mutate(product_id = str_replace(`Variant no.`,paste0(col3,"_"),""))
 
+
+############## CLX MANIPULATE ####################
 
 
 # REMOVE QUOTES -----------------------------------------------------------
@@ -65,9 +70,13 @@ clx <- clx %>%
         arrange(product_id,shooting) %>% 
         summarise(shooting = first(shooting)) 
 
+############## DESCRIPTION MANIPULATE ####################
+
+descrizioni <- descrizioni %>% 
+        mutate_at(vars(-`Product ID`,-Brand), ~ case_when(!is.na(.) ~ "Available", TRUE ~ .))
 
 
-# MERGE FILES -------------------------------------------------------------
+############## MERGE FILES 
 pim <- pim %>% 
         mutate(product_id = gsub("_F[0-9]{4}_","_",`Variant no.`))
 
@@ -87,7 +96,3 @@ output_file <- "k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_repo
 out %>% 
         write.csv(na = "", row.names = F, file = output_file, fileEncoding = "UTF-8")
 
-pim %>% count(col3) %>% View()
-
-
-table(pim$`Published PIM (Canada)`,pim$`Published WCS (Canada)`)
