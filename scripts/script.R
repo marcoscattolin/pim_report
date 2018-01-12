@@ -89,7 +89,7 @@ out <- pim %>%
 
 
 # WRITE FILES -------------------------------------------------------------
-output_file <- "k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_report/raw data/pim_report.csv"
+output_file <- "k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_report/raw data/output/pim_report.csv"
 
 
 
