@@ -18,11 +18,10 @@ pim <- read_excel("k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_r
 
 
 # GENERATE PRODUCT ID ----------------------------------------------------
-pim %>% 
+pim <- pim %>% 
         separate(col = `Variant no.`, into = c("col1","col2","col3"), remove = F, sep = "_", extra = "drop") %>% 
         select(-col1,-col2) %>% 
-        mutate(product_id = str_replace(`Variant no.`,paste0(col3),"") %>% str_replace(.,"__","_")) %>% 
-        select(`Variant no.`,product_id)
+        mutate(product_id = str_replace(`Variant no.`,paste0(col3),"") %>% str_replace(.,"__","_") %>% str_replace(.,"_$",""))
         
 
 
@@ -61,7 +60,7 @@ clx <- anagrafica %>%
 clx <- clx %>% 
         separate(col = sku, into = c("col1","col2","col3"), remove = F, sep = "-", extra = "drop") %>% 
         select(-col1,-col2) %>% 
-        mutate(product_id = str_replace(`Variant no.`,paste0(col3),"") %>% str_replace(.,"--","-")) %>% 
+        mutate(product_id = str_replace(sku,paste0(col3),"") %>% str_replace(.,"--","-") %>% str_replace(.,"-$","")) %>% 
         mutate(product_id = gsub("-","_",product_id))
 
 
