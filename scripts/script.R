@@ -91,5 +91,6 @@ output_file <- "k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_repo
 
 
 out %>% 
+        mutate(script_execution_time = Sys.time()) %>% 
         write.csv(na = "", row.names = F, file = output_file, fileEncoding = "UTF-8")
 
