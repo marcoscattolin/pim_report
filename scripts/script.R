@@ -11,7 +11,7 @@ clx <- read_excel("k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_r
 
 anagrafica <- read_csv2("k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_report/raw data/FLUIID4_ANAGRAFICA_TOT.CSV",quote = "", col_types = cols(.default = col_character()))
 descrizioni <- read_csv2("k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_report/raw data/ProductTextEnrichment.csv", col_types = cols(.default = col_character()))
-pim <- read_excel("k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_report/raw data/Published PIM - master.xlsx", sheet = "Sheet1")
+pim <- read_excel("k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_report/raw data/Published PIM - master.xlsx", sheet = "Sheet1", guess_max = 1000000)
 
 
 ############## PIM MANIPULATE ####################
