@@ -144,7 +144,7 @@ marta_report <- marta_report %>%
 
 
 marta_report <- marta_report %>% 
-        separate(col = sku, into = c("Modelcode","Materialcode","Colorcode","Typevariantcode","Variantcode"), remove = F, sep = "_") %>% 
+        separate(col = sku, into = c("Modelcode","Materialcode","Colorcode","Typevariantcode","Variantcode"), remove = F, sep = "_", fill = "right") %>% 
         mutate(sku_editoriale = str_replace(sku,paste0(Colorcode),"") %>% str_replace(.,"__","_") %>% str_replace(.,"_$","") %>% gsub("_","",.)) %>% 
         mutate(sku_catalogo = paste0(Modelcode,Materialcode,Typevariantcode,Variantcode,Colorcode)) %>% 
         mutate(recap_inclusa_giacenza = case_when(!is.na(tipo_giacenza) ~ paste0(recap," - ",tipo_giacenza),
