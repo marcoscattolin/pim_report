@@ -12,6 +12,8 @@ clx <- read_excel("k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_r
 anagrafica <- read_csv2("k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_report/raw data/FLUIID4_ANAGRAFICA_TOT.CSV",quote = "", col_types = cols(.default = col_character()))
 descrizioni <- read_csv2("k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_report/raw data/ProductTextEnrichment.csv", col_types = cols(.default = col_character()))
 pim <- read_excel("k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_report/raw data/Published PIM - master.xlsx", sheet = "Sheet1", guess_max = 1000000)
+giacenze <- read_excel("k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_report/raw data/estrazione magazzino.XLS",sheet = 1, guess_max = 1000000)
+
 
 
 ############## PIM MANIPULATE ####################
@@ -25,7 +27,7 @@ pim <- pim %>%
         
 
 
-############## CLX MANIPULATE ####################
+############## ANAGRAFICA MANIPULATE ####################
 
 
 # REMOVE QUOTES -----------------------------------------------------------
@@ -34,6 +36,7 @@ anagrafica <- anagrafica %>%
         mutate_all(~ gsub("^\"","",.))
 
 
+############## CLX MANIPULATE ####################
 
 # FILTER OUT INVALID PLACEHOLDERS  ----------------------------------------
 clx <- clx %>% 
@@ -45,9 +48,9 @@ clx <- clx %>%
 
 
 
-# RESHAPE OUTFILE ---------------------------------------------------------
+# RESHAPE ANAGRAFICA AND REPLACE CLX SKU WITH RESHAPED SKU PRESENT IN ANAGRAFICA --------------------------------------------
 clx <- anagrafica %>% 
-        select(ID_ARTICOLO,SKUs) %>% 
+        select(ID_ARTICOLO,SKUs,CodiceCollezione,DescrizioneReparto,DES_ABBINAMENTO,DescrizioneColore,LABEL_WAVE) %>% 
         mutate(sku = str_split(string = SKUs, pattern = ",")) %>% 
         unnest(sku) %>% 
         select(-SKUs) %>% 
@@ -57,14 +60,14 @@ clx <- anagrafica %>%
 
 
 # GROUP BY PRODUCT --------------------------------------------------------
-clx <- clx %>% 
+clx_agg <- clx %>% 
         separate(col = sku, into = c("col1","col2","col3"), remove = F, sep = "-", extra = "drop") %>% 
         select(-col1,-col2) %>% 
         mutate(product_id = str_replace(sku,paste0(col3),"") %>% str_replace(.,"--","-") %>% str_replace(.,"-$","")) %>% 
         mutate(product_id = gsub("-","_",product_id))
 
 
-clx <- clx %>% 
+clx_agg <- clx_agg %>% 
         select(product_id,Shooting) %>% 
         mutate(shooting = case_when(grepl("iniziare",Shooting, ignore.case = T) ~ "No Foto", TRUE ~ "Foto Presenti")) %>% 
         group_by(product_id) %>% 
@@ -72,25 +75,99 @@ clx <- clx %>%
         summarise(shooting = first(shooting)) 
 
 ############## DESCRIPTION MANIPULATE ####################
-
 descrizioni <- descrizioni %>% 
         mutate_at(vars(-`Product ID`,-Brand), ~ case_when(!is.na(.) ~ "Available", TRUE ~ .))
 
 
-############## MERGE FILES 
 
+
+############## GIACENZE MANIPULATE ####################
+giacenze <- giacenze %>% 
+        mutate_all(str_trim) %>% 
+        mutate_at(vars(MDPRB6,CPARB6,COL5B6,TPVAB6,VARIB6), ~ ifelse(is.na(.),"",.)) %>% 
+        mutate(sku = paste0(MDPRB6,"_",CPARB6,"_",COL5B6,"_",TPVAB6,"_",VARIB6)) %>% 
+        mutate(sku = gsub("__","_",sku) %>% gsub("_$","",.)) %>% 
+        mutate(tipo_giacenza = MAGAB6) %>% 
+        select(sku,tipo_giacenza) %>% 
+        distinct() %>% 
+        group_by(sku) %>% 
+        summarise(tipo_giacenza = paste0(tipo_giacenza, collapse = ", "))
+        
+
+############## MERGE FILES FOR PIM DASHBOARD 
 out <- pim %>% 
-        left_join(clx, by = "product_id") %>% 
+        left_join(clx_agg, by = "product_id") %>% 
         left_join(descrizioni, by = c("product_id" = "Product ID"))
+
+
+############## MERGE FILES FOR MARTA REPORT 
+marta_report <- clx %>% 
+        mutate(sku = gsub("-","_",sku)) %>% 
+        left_join(giacenze, by = "sku") %>% 
+        right_join(pim, by = c("sku" = "Variant no."))
+
+#recap shooting
+recap <- marta_report %>% 
+        filter(!is.na(file_name)) %>% 
+        mutate(photo_present = case_when(grepl("\\.jpg$|\\.png$",file_name, ignore.case = T) ~ "scattato", TRUE ~ "non_scattato")) %>% 
+        group_by(sku,photo_present) %>% 
+        summarise(n = n()) %>% 
+        spread(photo_present,n,fill = 0) %>% 
+        ungroup() %>% 
+        mutate(recap = case_when(non_scattato == 0 & scattato > 0 ~ "shooting completo",
+                                 non_scattato > 0 & scattato > 0 ~ "mancano alcune",
+                                 non_scattato > 0 & scattato == 0 ~ "mancano tutte",
+                                 TRUE ~ "invalid"))
+
+#recap approvazione
+recap_approvazione <- marta_report %>% 
+        filter(!is.na(file_name)) %>% 
+        mutate(approvazione = case_when(grepl("approvati|alternative|contributi|(contributi lavorati)",asset_status, ignore.case = T) ~ "approvati", TRUE ~ "non_approvati")) %>% 
+        group_by(sku,approvazione) %>% 
+        summarise(n = n()) %>% 
+        spread(approvazione,n,fill = 0) %>% 
+        ungroup() %>% 
+        mutate(recap_approvazione = case_when(non_approvati == 0 & approvati > 0 ~ "approvazione completa",
+                                 non_approvati >  0 & approvati > 0 ~ "approvazione parziale",
+                                 non_approvati >  0 & approvati == 0 ~ "nessuna approvazione",
+                                 TRUE ~ "invalid"))
+
+
+
+
+marta_report <- marta_report %>% 
+        group_by(sku) %>% 
+        summarise_at(vars(CodiceCollezione,DescrizioneReparto,DES_ABBINAMENTO,DescrizioneColore,LABEL_WAVE),first) %>% 
+        inner_join(recap, by = "sku") %>% 
+        inner_join(recap_approvazione, by = "sku") %>% 
+        left_join(giacenze, by = "sku")
+
+
+marta_report <- marta_report %>% 
+        separate(col = sku, into = c("Modelcode","Materialcode","Colorcode","Typevariantcode","Variantcode"), remove = F, sep = "_") %>% 
+        mutate(sku_editoriale = str_replace(sku,paste0(Colorcode),"") %>% str_replace(.,"__","_") %>% str_replace(.,"_$","") %>% gsub("_","",.)) %>% 
+        mutate(sku_catalogo = paste0(Modelcode,Materialcode,Typevariantcode,Variantcode,Colorcode)) %>% 
+        mutate(recap_inclusa_giacenza = case_when(!is.na(tipo_giacenza) ~ paste0(recap," - ",tipo_giacenza),
+                                                  TRUE ~ recap)) %>% 
+        select(sku,sku_editoriale,sku_catalogo,Modelcode,Materialcode,Typevariantcode,Variantcode,Colorcode,recap,recap_inclusa_giacenza,recap_approvazione,LABEL_WAVE, CodiceCollezione,DescrizioneReparto,DES_ABBINAMENTO,DescrizioneColore)
+
+
 
 
 
 # WRITE FILES -------------------------------------------------------------
 output_file <- "k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_report/raw data/output/pim_report.csv"
 
-
-
 out %>% 
         mutate(script_execution_time = Sys.time()) %>% 
         write.csv(na = "", row.names = F, file = output_file, fileEncoding = "UTF-8")
+
+
+marta_output_file <- "k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_report/raw data/output/pim_report_marta.csv"
+
+marta_report %>% 
+        mutate(script_execution_time = Sys.time()) %>% 
+        write.csv(na = "", row.names = F, file = marta_output_file, fileEncoding = "UTF-8")
+
+
 
