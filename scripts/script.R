@@ -103,8 +103,8 @@ out <- pim %>%
 ############## MERGE FILES FOR MARTA REPORT 
 marta_report <- clx %>% 
         mutate(sku = gsub("-","_",sku)) %>% 
-        left_join(giacenze, by = "sku") %>% 
-        right_join(pim, by = c("sku" = "Variant no."))
+        left_join(giacenze, by = "sku") 
+
 
 #recap shooting
 recap <- marta_report %>% 
@@ -135,11 +135,9 @@ recap_approvazione <- marta_report %>%
                                  TRUE ~ "other"))
 
 
-
-
 marta_report <- marta_report %>% 
         group_by(sku) %>% 
-        summarise_at(vars(Brand,CodiceCollezione,DescrizioneReparto,DES_ABBINAMENTO,DescrizioneColore,LABEL_WAVE),first) %>% 
+        summarise_at(vars(marchio,CodiceCollezione,DescrizioneReparto,DES_ABBINAMENTO,DescrizioneColore,LABEL_WAVE),first) %>% 
         inner_join(recap, by = "sku") %>% 
         inner_join(recap_approvazione, by = "sku") %>% 
         left_join(giacenze, by = "sku")
@@ -152,6 +150,16 @@ marta_report <- marta_report %>%
         mutate(sku_catalogo = paste0(Modelcode,Typevariantcode,Variantcode,Materialcode,Colorcode)) %>% 
         mutate(recap_inclusa_giacenza = case_when(!is.na(tipo_giacenza) ~ paste0(recap," - ",tipo_giacenza),
                                                   TRUE ~ recap)) %>% 
+        select(sku,sku_editoriale,sku_catalogo,marchio,Modelcode,Materialcode,Typevariantcode,Variantcode,Colorcode,recap,recap_inclusa_giacenza,recap_approvazione,LABEL_WAVE, CodiceCollezione,DescrizioneReparto,DES_ABBINAMENTO,DescrizioneColore)
+
+
+
+nicola_report <- marta_report %>% 
+        filter(marchio == "Miu Miu")
+
+marta_report <- marta_report %>%
+        select(-marchio) %>% 
+        right_join(pim %>% select(`Variant no.`,Brand), by = c("sku" = "Variant no.")) %>% 
         select(sku,sku_editoriale,sku_catalogo,Brand,Modelcode,Materialcode,Typevariantcode,Variantcode,Colorcode,recap,recap_inclusa_giacenza,recap_approvazione,LABEL_WAVE, CodiceCollezione,DescrizioneReparto,DES_ABBINAMENTO,DescrizioneColore)
 
 
@@ -159,14 +167,14 @@ marta_report <- marta_report %>%
 
 
 # WRITE FILES -------------------------------------------------------------
-output_file <- "k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_report/raw data/output/pim_report.csv"
+output_file <- "k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_report/output_reports/pim_report_descrizioni.csv"
 
 out %>% 
         mutate(script_execution_time = Sys.time()) %>% 
         write.csv(na = "", row.names = F, file = output_file, fileEncoding = "UTF-8")
 
 
-marta_output_file <- "k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_report/raw data/output/pim_report_marta.csv"
+marta_output_file <- "k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_report/output_reports/pim_report_scatti.csv"
 
 marta_report %>% 
         mutate(script_execution_time = Sys.time()) %>% 
@@ -174,3 +182,8 @@ marta_report %>%
 
 
 
+nicola_output_file <- "k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/pim_report/output_reports/pim_report_miumiu.csv"
+
+nicola_report %>% 
+        mutate(script_execution_time = Sys.time()) %>% 
+        write.csv(na = "", row.names = F, file = nicola_output_file, fileEncoding = "UTF-8")

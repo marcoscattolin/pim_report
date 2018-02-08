@@ -1,3 +1,22 @@
+# QUADRATURA DASHBOARD DESCRIZIONI  ---------------------------------------
+out %>% 
+        filter(Brand.x == "PR") %>% 
+        count(`Published PIM (global)`)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# QUADRATURA REPORT MARTA -------------------------------------------------
 quadratura <- read_excel("../../../../Desktop/SCATTO_status_scatti_as_of_20180207.xlsx", col_types = "text")
 
 quadratura <- quadratura %>% 
@@ -30,3 +49,6 @@ quadratura %>%
         filter(!grepl("MM",LABEL_WAVE)) %>% 
         filter(LABEL_WAVE != "ELIMINARE" & LABEL_WAVE != "NOWAVE") %>% 
         anti_join(marta_report, by = c("sku")) %>% count(LABEL_WAVE)
+
+
+
