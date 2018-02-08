@@ -122,7 +122,9 @@ recap <- marta_report %>%
 #recap approvazione
 recap_approvazione <- marta_report %>% 
         filter(!is.na(file_name)) %>% 
-        mutate(approvazione = case_when(grepl("approvati|alternative|contributi|(contributi lavorati)",asset_status, ignore.case = T) ~ "approvati", TRUE ~ "non_approvati")) %>% 
+        mutate(approvazione = case_when(grepl("approvati",asset_status, ignore.case = T) ~ "approvati", 
+                                        grepl("alternativ.|cancellat.|contribut.|(contributi lavorati)",asset_status, ignore.case = T) ~ "altri_stati", 
+                                        TRUE ~ "non_approvati")) %>% 
         group_by(sku,approvazione) %>% 
         summarise(n = n()) %>% 
         spread(approvazione,n,fill = 0) %>% 
@@ -130,14 +132,14 @@ recap_approvazione <- marta_report %>%
         mutate(recap_approvazione = case_when(non_approvati == 0 & approvati > 0 ~ "approvazione completa",
                                  non_approvati >  0 & approvati > 0 ~ "approvazione parziale",
                                  non_approvati >  0 & approvati == 0 ~ "nessuna approvazione",
-                                 TRUE ~ "invalid"))
+                                 TRUE ~ "other"))
 
 
 
 
 marta_report <- marta_report %>% 
         group_by(sku) %>% 
-        summarise_at(vars(CodiceCollezione,DescrizioneReparto,DES_ABBINAMENTO,DescrizioneColore,LABEL_WAVE),first) %>% 
+        summarise_at(vars(Brand,CodiceCollezione,DescrizioneReparto,DES_ABBINAMENTO,DescrizioneColore,LABEL_WAVE),first) %>% 
         inner_join(recap, by = "sku") %>% 
         inner_join(recap_approvazione, by = "sku") %>% 
         left_join(giacenze, by = "sku")
@@ -146,10 +148,11 @@ marta_report <- marta_report %>%
 marta_report <- marta_report %>% 
         separate(col = sku, into = c("Modelcode","Materialcode","Colorcode","Typevariantcode","Variantcode"), remove = F, sep = "_", fill = "right") %>% 
         mutate(sku_editoriale = str_replace(sku,paste0(Colorcode),"") %>% str_replace(.,"__","_") %>% str_replace(.,"_$","") %>% gsub("_","",.)) %>% 
-        mutate(sku_catalogo = paste0(Modelcode,Materialcode,Typevariantcode,Variantcode,Colorcode)) %>% 
+        mutate_at(vars(Modelcode,Materialcode,Typevariantcode,Variantcode,Colorcode), ~ ifelse(is.na(.),"",.)) %>% 
+        mutate(sku_catalogo = paste0(Modelcode,Typevariantcode,Variantcode,Materialcode,Colorcode)) %>% 
         mutate(recap_inclusa_giacenza = case_when(!is.na(tipo_giacenza) ~ paste0(recap," - ",tipo_giacenza),
                                                   TRUE ~ recap)) %>% 
-        select(sku,sku_editoriale,sku_catalogo,Modelcode,Materialcode,Typevariantcode,Variantcode,Colorcode,recap,recap_inclusa_giacenza,recap_approvazione,LABEL_WAVE, CodiceCollezione,DescrizioneReparto,DES_ABBINAMENTO,DescrizioneColore)
+        select(sku,sku_editoriale,sku_catalogo,Brand,Modelcode,Materialcode,Typevariantcode,Variantcode,Colorcode,recap,recap_inclusa_giacenza,recap_approvazione,LABEL_WAVE, CodiceCollezione,DescrizioneReparto,DES_ABBINAMENTO,DescrizioneColore)
 
 
 
