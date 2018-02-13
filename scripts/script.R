@@ -112,7 +112,7 @@ recap <- marta_report %>%
         mutate(photo_present = case_when(grepl("\\.jpg$|\\.png$|\\.psd\\.jpeg$",file_name, ignore.case = T) ~ "scattato", TRUE ~ "non_scattato")) %>% 
         group_by(sku,photo_present) %>% 
         summarise(n = n()) %>% 
-        spread(photo_present,n,fill = 0) %>% View()
+        spread(photo_present,n,fill = 0) %>% 
         ungroup() %>% 
         mutate(recap = case_when(non_scattato == 0 & scattato > 0 ~ "shooting completo",
                                  non_scattato > 0 & scattato > 0 ~ "mancano alcune",
