@@ -109,10 +109,10 @@ marta_report <- clx %>%
 #recap shooting
 recap <- marta_report %>% 
         filter(!is.na(file_name)) %>% 
-        mutate(photo_present = case_when(grepl("\\.jpg$|\\.png$",file_name, ignore.case = T) ~ "scattato", TRUE ~ "non_scattato")) %>% 
+        mutate(photo_present = case_when(grepl("\\.jpg$|\\.png$|\\.psd\\.jpeg$",file_name, ignore.case = T) ~ "scattato", TRUE ~ "non_scattato")) %>% 
         group_by(sku,photo_present) %>% 
         summarise(n = n()) %>% 
-        spread(photo_present,n,fill = 0) %>% 
+        spread(photo_present,n,fill = 0) %>% View()
         ungroup() %>% 
         mutate(recap = case_when(non_scattato == 0 & scattato > 0 ~ "shooting completo",
                                  non_scattato > 0 & scattato > 0 ~ "mancano alcune",
