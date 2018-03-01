@@ -157,11 +157,13 @@ marta_report <- marta_report %>%
 nicola_report <- marta_report %>% 
         filter(marchio == "Miu Miu")
 
+
+
 marta_report <- marta_report %>%
         select(-marchio) %>% 
-        right_join(pim %>% select(`Variant no.`,Brand), by = c("sku" = "Variant no.")) %>% 
+        right_join(pim %>%  filter(`Published PIM (global)` == "Yes") %>% select(`Variant no.`,Brand), by = c("sku" = "Variant no.")) %>% 
         select(sku,sku_editoriale,sku_catalogo,Brand,Modelcode,Materialcode,Typevariantcode,Variantcode,Colorcode,recap,recap_inclusa_giacenza,recap_approvazione,LABEL_WAVE, CodiceCollezione,DescrizioneReparto,DES_ABBINAMENTO,DescrizioneColore)
-
+        
 
 
 
