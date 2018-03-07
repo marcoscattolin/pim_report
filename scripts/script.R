@@ -21,6 +21,7 @@ giacenze <- read_excel("k:/dept/DIGITAL E-COMMERCE/E-COMMERCE/Report E-Commerce/
 
 # GENERATE PRODUCT ID ----------------------------------------------------
 pim <- pim %>% 
+        filter(`Variant no.` != "undefined") %>% 
         separate(col = `Variant no.`, into = c("col1","col2","col3"), remove = F, sep = "_", extra = "drop") %>% 
         select(-col1,-col2) %>% 
         mutate(product_id = str_replace(`Variant no.`,paste0(col3),"") %>% str_replace(.,"__","_") %>% str_replace(.,"_$",""))
